@@ -23,9 +23,9 @@ I choose the Codeforces problem 978B — File Name , which states the following:
 
 Input: 6/xxxiii -> Output: 1
 
-Input: 5/xxoxx -> Output: 1
+Input: 5/xxoxx -> Output: 0
 
-Input: 10/xxxxxxxxxx -> Output: 1
+Input: 10/xxxxxxxxxx -> Output: 8
 
 .
 
@@ -100,7 +100,7 @@ I tried 8 different strings. Three come from the Codeforces problem statement an
 To run the tests in SWI-Prolog:
 
 
-    wpl paradigm.pl
+    swipl paradigm.pl
     ?- solve("x's string", X).
     X = x's to eliminate.
 
