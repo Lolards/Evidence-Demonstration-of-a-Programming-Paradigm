@@ -162,6 +162,8 @@ Both solutions have the same complexity, O(n) in time and O(n) in space. The dif
 
 Another solution would be Python with a for loop and a counter variable, which would also run in O(n) time and O(1) space, but you would have to manually keep track of the consecutive x's count — less clean than the declarative approach.
 
+Although all three paradigms solve the problem in O(n × m), the best solution would actually be the Parallel Paradigm. Since every cell is completely independent, its color only depends on its own position `(Row + Col) mod 2`, all cells could be colored at the same time with no communication needed between threads, reducing the time to O((n × m) / p) where p is the number of processors. That said, for a board of at most 100×100 cells, the overhead of managing threads would likely outweigh the gains, making the Logical Paradigm in Prolog the most practical choice for this problem size.
+
 ---
 
 # References
@@ -175,3 +177,5 @@ https://docs.google.com/document/d/1RMGCGPHs4aLyfOTcwZJHSzQQlBP1uJYJe72jLIdcO7g/
 Wikipedia. (2024). Codeforces. https://es.wikipedia.org/wiki/Codeforces
 
 Kowalski, R. (2014). Logic Programming. Handbook of the History of Logic (pp. 523–569). https://doi.org/10.1016/b978-0-444-51624-4.50012-5
+
+https://docs.google.com/document/d/1ravAZ92VzJ-xXXCrWzP6W8i9yWVWZB0MT273BVoxQvI/edit?tab=t.0
